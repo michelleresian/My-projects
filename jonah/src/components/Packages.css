@@ -1,0 +1,58 @@
+/* Packages.css */
+.packages-container {
+    padding: 30px 0;
+    background-image: url(https://images.unsplash.com/photo-1581364101929-bd09d423e738?q=80&w=1308&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  }
+  
+  .packages-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color: black;
+  }
+  
+  .package-item {
+    background: white;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+  }
+  
+  .package-item h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .package-item p {
+    margin-bottom: 15px;
+  }
+  
+  .package-item ul {
+    margin-bottom: 15px;
+  }
+  
+  .package-item li {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .learn-more {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+  }
+  
+  .package-item:hover {
+    background-color: rgb(43, 196, 196);
+    transform: translateY(-10px);
+  }
+  
