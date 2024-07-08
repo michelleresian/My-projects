@@ -6,16 +6,29 @@ import Services from './components/Services';
 import Packages from './components/Packages';
 import Gallery from './components/Gallery';
 import ContactUs from './components/ContactUs';
+import { Element } from 'react-scroll';
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <About />
-      <Services />
-      <Packages />
-      <Gallery />
-      <ContactUs />
+      <Element name="home">
+        <Home />
+      </Element>
+      <Element name="about">
+        <About />
+      </Element>
+      <Element name="services">
+        <Services />
+      </Element>
+      <Element name="packages">
+        <Packages />
+      </Element>
+      <Element name="gallery">
+        <Gallery />
+      </Element>
+      <Element name="contact">
+        <ContactUs />
+      </Element>
     </div>
   );
 }

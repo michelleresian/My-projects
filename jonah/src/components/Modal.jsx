@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Modal.css'; // Make sure to adjust the CSS file path as per your project structure
+import './Modal.css'; // Adjust the CSS file path as per your project structure
 
 const Modal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -27,7 +27,7 @@ const Modal = ({ isOpen, onClose }) => {
 
   return (
     <>
-      {isOpen &&
+      {isOpen && (
         <div className="modal-overlay">
           <div className="modal">
             <button className="close-btn" onClick={onClose}>Close</button>
@@ -76,7 +76,7 @@ const Modal = ({ isOpen, onClose }) => {
             </form>
           </div>
         </div>
-      }
+      )}
     </>
   );
 };

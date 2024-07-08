@@ -1,11 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import './Packages.css';
+import Modal from './Modal'; // Adjust the import path as needed
 
 const Packages = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div id="packages" className="packages-container">
-      
       <h1>Packages</h1>
       <div className="packages-list">
         <div className="package-item">
@@ -20,7 +29,7 @@ const Packages = () => {
           </ul>
           <p>Duration: 7 days</p>
           <p>Price: Starting at $5000 per person</p>
-          <Link to="/luxury-safari" className="learn-more">Learn more</Link>
+          <button className="book-now" onClick={openModal}>Book now</button>
         </div>
         <div className="package-item">
           <h2>Classic Safari Package</h2>
@@ -34,7 +43,7 @@ const Packages = () => {
           </ul>
           <p>Duration: 5 days</p>
           <p>Price: Starting at $3000 per person</p>
-          <Link to="/classic-safari" className="learn-more">Learn more</Link>
+          <button className="book-now" onClick={openModal}>Book now</button>
         </div>
         <div className="package-item">
           <h2>Family Safari Experience</h2>
@@ -48,7 +57,7 @@ const Packages = () => {
           </ul>
           <p>Duration: 6 days</p>
           <p>Price: Starting at $3500 per family</p>
-          <Link to="/family-safari" className="learn-more">Learn more</Link>
+          <button className="book-now" onClick={openModal}>Book now</button>
         </div>
         <div className="package-item">
           <h2>Honeymoon Safari Escape</h2>
@@ -62,9 +71,10 @@ const Packages = () => {
           </ul>
           <p>Duration: 8 days</p>
           <p>Price: Starting at $6000 per couple</p>
-          <Link to="/honeymoon-safari" className="learn-more">Learn more</Link>
+          <button className="book-now" onClick={openModal}>Book now</button>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
