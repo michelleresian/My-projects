@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Packages.css';
-import Modal from './Modal'; // Adjust the import path as needed
+import Modal from './Modal'; 
 
 const Packages = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
